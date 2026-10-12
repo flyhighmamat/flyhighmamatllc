@@ -1,0 +1,605 @@
+/* ==================================================
+   FLY HIGH
+   SERVICES PAGE
+   ================================================== */
+
+
+/* ==================================================
+   BRAND
+   ================================================== */
+
+.services-page {
+  --cream: #faf4ea;
+  --white: #fffdf8;
+
+  --blue: #669bbc;
+  --light-blue: #ebf2fa;
+
+  --navy: #173753;
+  --taupe: #5e503f;
+
+  --heading:
+    "Mrs Eaves OT",
+    Georgia,
+    serif;
+
+  --body:
+    "Aquavit",
+    Arial,
+    sans-serif;
+
+  background: var(--white);
+  color: var(--navy);
+
+  overflow-x: hidden;
+}
+
+
+/* ==================================================
+   TYPOGRAPHY
+   ================================================== */
+
+.services-page h1,
+.services-page h2,
+.services-page h3 {
+  font-family:
+    var(--heading);
+}
+
+
+.services-page p,
+.services-page a,
+.services-page span,
+.services-page button {
+  font-family:
+    var(--body);
+}
+
+
+/* ==================================================
+   SHARED
+   ================================================== */
+
+.services-container {
+  width:
+    min(1120px, calc(100% - 80px));
+
+  margin: 0 auto;
+}
+
+
+.services-label {
+  margin: 0 0 18px;
+
+  color: var(--blue);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+}
+
+
+.service-label-light {
+  color: #a8cce0;
+}
+
+
+.service-label-cream {
+  color: var(--cream);
+}
+
+
+/* ==================================================
+   HERO
+   ================================================== */
+
+.services-hero {
+  padding: 90px 0 105px;
+
+  background: var(--white);
+}
+
+
+.services-hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(320px, 0.82fr);
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+.services-hero-copy {
+  max-width: 640px;
+}
+
+
+.services-hero h1 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-size:
+    clamp(64px, 7vw, 98px);
+
+  font-weight: 400;
+
+  line-height: 0.92;
+}
+
+
+.services-lead {
+  max-width: 580px;
+
+  margin: 30px 0 0;
+
+  color:
+    rgba(23, 55, 83, 0.72);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* HERO PHOTO */
+
+.services-hero-photo {
+  width: 100%;
+  max-width: 500px;
+
+  margin-left: auto;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+
+.services-hero-photo img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-radius: 28px;
+}
+
+
+/* ==================================================
+   SHARED SERVICE SECTION
+   ================================================== */
+
+.service-section {
+  padding: 105px 0;
+}
+
+
+.service-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  gap: 95px;
+
+  align-items: start;
+}
+
+
+/* LEFT SIDE */
+
+.service-heading {
+  max-width: 530px;
+}
+
+
+.service-heading h2 {
+  margin: 0;
+
+  font-size:
+    clamp(55px, 5.5vw, 80px);
+
+  font-weight: 400;
+
+  line-height: 0.94;
+}
+
+
+/* RIGHT SIDE */
+
+.service-copy {
+  max-width: 590px;
+
+  padding-top: 35px;
+}
+
+
+.service-copy p {
+  max-width: 570px;
+
+  margin: 0 0 21px;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+
+.service-copy p:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/* CTA */
+
+.service-link {
+  width: fit-content;
+
+  display: inline-block;
+
+  margin-top: 30px;
+
+  padding-bottom: 5px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  border-bottom:
+    1px solid currentColor;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.service-link:hover {
+  opacity: 0.62;
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* ==================================================
+   DISCOVERY FLIGHTS
+   LIGHT BLUE
+   ================================================== */
+
+.service-discovery {
+  background: var(--light-blue);
+  color: var(--navy);
+}
+
+
+.service-discovery
+.service-heading h2 {
+
+  color: var(--navy);
+}
+
+
+.service-discovery
+.service-copy p {
+
+  color:
+    rgba(23, 55, 83, 0.74);
+}
+
+
+.service-discovery
+.service-link {
+
+  color: var(--navy);
+}
+
+
+/* ==================================================
+   FLIGHT TRAINING
+   NAVY
+   ================================================== */
+
+.service-training {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+
+.service-training
+.service-heading h2 {
+
+  color: var(--cream);
+}
+
+
+.service-training
+.service-copy p {
+
+  color:
+    rgba(250, 244, 234, 0.84);
+}
+
+
+.service-training
+.service-link {
+
+  color: var(--cream);
+}
+
+
+/* ==================================================
+   CUSTOM EXPERIENCES
+   TAUPE
+   ================================================== */
+
+.service-custom {
+  background: var(--taupe);
+  color: var(--cream);
+}
+
+
+.service-custom
+.service-heading h2 {
+
+  color: var(--cream);
+}
+
+
+.service-custom
+.service-copy p {
+
+  color:
+    rgba(250, 244, 234, 0.86);
+}
+
+
+.service-custom
+.service-link {
+
+  color: var(--cream);
+}
+
+
+/* ==================================================
+   FOOTER PAGE-SPECIFIC
+   ================================================== */
+
+.services-page
+.footer-contact {
+
+  font-style: normal;
+}
+
+
+.services-page
+.footer-contact p {
+
+  margin:
+    0 0 7px;
+}
+
+
+.services-page
+.footer-contact a {
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.services-page
+.footer-contact a:hover {
+
+  color: var(--blue);
+}
+
+
+.services-page
+.footer-phone {
+
+  margin-top:
+    18px;
+}
+
+
+.services-page
+.copy-email {
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+
+  background:
+    transparent;
+
+  color:
+    rgba(23, 55, 83, 0.72);
+
+  font-family:
+    var(--body);
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.services-page
+.copy-email:hover {
+
+  color: var(--blue);
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 900px) {
+
+  .services-container {
+    width:
+      min(
+        680px,
+        calc(100% - 50px)
+      );
+  }
+
+
+  /* HERO */
+
+  .services-hero-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 48px;
+  }
+
+
+  .services-hero-photo {
+    max-width: 540px;
+
+    margin-left: 0;
+  }
+
+
+  /* SERVICES */
+
+  .service-layout {
+    grid-template-columns:
+      1fr;
+
+    gap: 38px;
+  }
+
+
+  .service-heading {
+    max-width: 620px;
+  }
+
+
+  .service-copy {
+    max-width: 620px;
+
+    padding-top: 0;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 650px) {
+
+  .services-container {
+    width:
+      calc(100% - 40px);
+  }
+
+
+  /* HERO */
+
+  .services-hero {
+    padding:
+      65px 0
+      75px;
+  }
+
+
+  .services-hero-grid {
+    gap: 38px;
+  }
+
+
+  .services-hero h1 {
+    font-size: 56px;
+
+    line-height: 0.96;
+  }
+
+
+  .services-lead {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  .services-hero-photo,
+  .services-hero-photo img {
+
+    border-radius: 22px;
+  }
+
+
+  /* SERVICE SECTIONS */
+
+  .service-section {
+    padding:
+      78px 0;
+  }
+
+
+  .service-layout {
+    gap: 30px;
+  }
+
+
+  .service-heading h2 {
+    font-size: 49px;
+
+    line-height: 0.98;
+  }
+
+
+  .service-copy p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  .service-link {
+    margin-top: 25px;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+   ================================================== */
+
+@media (max-width: 430px) {
+
+  .services-hero h1 {
+    font-size: 50px;
+  }
+
+
+  .service-heading h2 {
+    font-size: 44px;
+  }
+
+}

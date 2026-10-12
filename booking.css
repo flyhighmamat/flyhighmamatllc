@@ -1,0 +1,901 @@
+/* ==================================================
+   FLY HIGH BOOKING PAGE
+   ================================================== */
+
+.booking-page {
+  --cream: #faf4ea;
+  --white: #fffdf8;
+  --soft-cream: #fffdf8;
+
+  --blue: #669bbc;
+  --light-blue: #ebf2fa;
+
+  --navy: #173753;
+  --taupe: #5e503f;
+
+  background: var(--soft-cream);
+  color: var(--navy);
+
+  overflow-x: hidden;
+}
+
+
+/* ==================================================
+   TYPOGRAPHY
+   ================================================== */
+
+.booking-page h1,
+.booking-page h2,
+.booking-page h3 {
+  font-family:
+    var(--heading, "Mrs Eaves OT", Georgia, serif);
+}
+
+.booking-page p,
+.booking-page a,
+.booking-page span,
+.booking-page button {
+  font-family:
+    var(--body, "Aquavit", Arial, sans-serif);
+}
+
+
+/* ==================================================
+   SHARED
+   ================================================== */
+
+.booking-container {
+  width: min(1120px, calc(100% - 80px));
+
+  margin: 0 auto;
+}
+
+.booking-label {
+  margin: 0 0 16px;
+
+  color: var(--blue);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.label-light {
+  color: #c5dce8;
+}
+
+
+/* ==================================================
+   HERO
+   ================================================== */
+
+.booking-hero {
+  padding: 95px 0 110px;
+
+  background: var(--soft-cream);
+}
+
+.booking-hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(320px, 0.8fr);
+
+  gap: 75px;
+
+  align-items: center;
+}
+
+.booking-hero-copy {
+  max-width: 610px;
+}
+
+.booking-hero h1 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-size: clamp(64px, 7vw, 96px);
+  font-weight: 400;
+
+  line-height: 0.9;
+}
+
+.booking-lead {
+  max-width: 510px;
+
+  margin: 28px 0 0;
+
+  color: rgba(23, 55, 83, 0.72);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* FORM BUTTON */
+
+.booking-form-button {
+  display: inline-block;
+
+  margin-top: 32px;
+
+  padding: 16px 26px;
+
+  background: var(--navy);
+  color: var(--cream);
+
+  border:
+    1px solid var(--navy);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.booking-form-button:hover {
+  background: transparent;
+  color: var(--navy);
+
+  transform: translateY(-2px);
+}
+
+
+/* CONTACT SCROLL LINK */
+
+.booking-contact-link {
+  width: fit-content;
+
+  display: block;
+
+  margin-top: 22px;
+
+  padding-bottom: 4px;
+
+  color: rgba(23, 55, 83, 0.72);
+
+  border-bottom:
+    1px solid rgba(23, 55, 83, 0.35);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.booking-contact-link:hover {
+  color: var(--blue);
+
+  border-color: var(--blue);
+}
+
+
+/* HERO PHOTO */
+
+.booking-hero-photo {
+  width: 100%;
+  max-width: 470px;
+
+  margin-left: auto;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+.booking-hero-photo img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-radius: 28px;
+}
+
+
+/* ==================================================
+   CONTACT
+   ================================================== */
+
+.booking-contact {
+  padding: 115px 0;
+
+  background: var(--navy);
+
+  scroll-margin-top: 30px;
+}
+
+.booking-contact-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.85fr
+    1.15fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+
+/* CONTACT HEADING */
+
+.booking-contact-heading h2 {
+  margin: 0;
+
+  color: var(--cream);
+
+  font-size: clamp(58px, 6vw, 84px);
+  font-weight: 400;
+
+  line-height: 0.9;
+}
+
+.booking-contact-heading > p:last-child {
+  max-width: 410px;
+
+  margin: 27px 0 0;
+
+  color: rgba(250, 244, 234, 0.74);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* CONTACT METHODS */
+
+.booking-contact-methods {
+  max-width: 600px;
+}
+
+.contact-method {
+  padding: 0 0 34px;
+
+  margin: 0 0 34px;
+
+  border-bottom:
+    1px solid rgba(250, 244, 234, 0.2);
+}
+
+.contact-method:last-child {
+  margin-bottom: 0;
+
+  border-bottom: 0;
+}
+
+.contact-method-label {
+  margin: 0 0 12px;
+
+  color: #c5dce8;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* LARGE CONTACT TEXT */
+
+.contact-main-link,
+.booking-copy-email,
+.contact-main-text {
+  color: var(--cream);
+
+  font-family:
+    var(--heading, "Mrs Eaves OT", Georgia, serif);
+
+  font-size: clamp(29px, 3.2vw, 42px);
+  font-weight: 400;
+
+  line-height: 1.15;
+}
+
+
+/* PHONE */
+
+.contact-main-link {
+  display: inline-block;
+
+  transition: opacity 0.2s ease;
+}
+
+.contact-main-link:hover {
+  opacity: 0.65;
+}
+
+
+/* EMAIL */
+
+.booking-copy-email {
+  max-width: 100%;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  overflow-wrap: anywhere;
+
+  transition: opacity 0.2s ease;
+}
+
+.booking-copy-email:hover {
+  opacity: 0.65;
+}
+
+
+/* ADDRESS */
+
+.contact-main-text {
+  margin: 0;
+}
+
+
+/* SMALL CONTACT NOTE */
+
+.contact-note {
+  margin: 9px 0 0;
+
+  color: rgba(250, 244, 234, 0.52);
+
+  font-size: 10px;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* ==================================================
+   SCHOLARSHIP
+   ================================================== */
+
+.booking-scholarship {
+  padding: 110px 0;
+
+  background: var(--light-blue);
+
+  scroll-margin-top: 30px;
+}
+
+.scholarship-booking-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(330px, 0.82fr);
+
+  gap: 85px;
+
+  align-items: center;
+}
+
+
+/* SCHOLARSHIP COPY */
+
+.scholarship-booking-copy {
+  max-width: 620px;
+}
+
+.scholarship-booking-copy h2 {
+  max-width: 650px;
+
+  margin: 0 0 28px;
+
+  color: var(--navy);
+
+  font-size: clamp(55px, 6vw, 82px);
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+.scholarship-booking-copy
+> p:not(.booking-label) {
+
+  max-width: 570px;
+
+  margin: 0 0 20px;
+
+  color: rgba(23, 55, 83, 0.74);
+
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+
+/* SCHOLARSHIP INQUIRY */
+
+.scholarship-booking-copy
+.scholarship-booking-inquiry {
+
+  max-width: 550px;
+
+  margin-top: 30px;
+  margin-bottom: 0;
+
+  padding-top: 26px;
+
+  border-top:
+    1px solid rgba(23, 55, 83, 0.18);
+}
+
+.scholarship-booking-inquiry strong {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  color: var(--navy);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.scholarship-booking-inquiry a {
+  color: var(--navy);
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid var(--navy);
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.scholarship-booking-inquiry a:hover {
+  color: var(--blue);
+
+  border-color: var(--blue);
+}
+
+
+/* SCHOLARSHIP PHOTO */
+
+.scholarship-booking-photo {
+  width: 100%;
+  max-width: 460px;
+
+  margin-left: auto;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+.scholarship-booking-photo img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-radius: 28px;
+}
+
+/* ==================================================
+   SOCIALS
+   ================================================== */
+
+.booking-socials {
+  padding: 95px 0;
+
+  background: #5e503f;
+  color: #faf4ea;
+}
+
+
+.booking-socials-inner {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  gap: 85px;
+
+  align-items: start;
+}
+
+
+.booking-socials-heading {
+  max-width: 520px;
+}
+
+
+.booking-socials-label {
+  color: #faf4ea;
+}
+
+
+.booking-socials-heading h2 {
+  margin: 0;
+
+  color: #faf4ea;
+
+  font-family:
+    var(--heading, "Mrs Eaves OT", Georgia, serif);
+
+  font-size:
+    clamp(54px, 5.5vw, 78px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+
+.booking-socials-heading
+p:not(.booking-label) {
+
+  max-width: 430px;
+
+  margin: 24px 0 0;
+
+  color:
+    rgba(250, 244, 234, 0.82);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* LINKS */
+
+.booking-socials-links {
+  width: 100%;
+
+  border-top:
+    1px solid rgba(250, 244, 234, 0.4);
+}
+
+
+.booking-socials-links a {
+  width: 100%;
+
+  padding: 24px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #faf4ea;
+
+  border-bottom:
+    1px solid rgba(250, 244, 234, 0.4);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    padding-left 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.booking-socials-links a:hover {
+  padding-left: 8px;
+
+  opacity: 0.7;
+}
+
+
+.booking-social-arrow {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 900px) {
+
+  .booking-socials-inner {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 650px) {
+
+  .booking-socials {
+    padding: 75px 0;
+  }
+
+
+  .booking-socials-heading h2 {
+    font-size: 50px;
+  }
+
+
+  .booking-socials-heading
+  p:not(.booking-label) {
+
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+
+  .booking-socials-links a {
+    padding: 20px 0;
+
+    font-size: 11px;
+  }
+
+}
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.booking-page .footer-contact {
+  font-style: normal;
+}
+
+.booking-page .footer-contact p {
+  margin: 0 0 7px;
+}
+
+.booking-page .footer-contact a {
+  color: inherit;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.booking-page .footer-contact a:hover {
+  color: var(--blue);
+}
+
+.booking-page .footer-phone {
+  margin-top: 18px;
+}
+
+.booking-page .copy-email {
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: rgba(23, 55, 83, 0.72);
+
+  font-family:
+    var(--body, "Aquavit", Arial, sans-serif);
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.booking-page .copy-email:hover {
+  color: var(--blue);
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 900px) {
+
+  .booking-container {
+    width: min(680px, calc(100% - 50px));
+  }
+
+
+  .booking-hero-grid,
+  .booking-contact-grid,
+  .scholarship-booking-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+
+  /* HERO */
+
+  .booking-hero {
+    padding: 80px 0 90px;
+  }
+
+  .booking-hero-photo {
+    max-width: 540px;
+
+    margin-left: 0;
+  }
+
+
+  /* CONTACT */
+
+  .booking-contact {
+    padding: 95px 0;
+  }
+
+  .booking-contact-methods {
+    max-width: 100%;
+  }
+
+
+  /* SCHOLARSHIP */
+
+  .booking-scholarship {
+    padding: 95px 0;
+  }
+
+  .scholarship-booking-photo {
+    max-width: 540px;
+
+    margin-left: 0;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 700px) {
+
+  .booking-container {
+    width: calc(100% - 40px);
+  }
+
+
+  /* HERO */
+
+  .booking-hero {
+    padding: 65px 0 75px;
+  }
+
+  .booking-hero-grid {
+    gap: 40px;
+  }
+
+  .booking-hero h1 {
+    font-size: 58px;
+  }
+
+  .booking-lead {
+    font-size: 14px;
+  }
+
+  .booking-form-button {
+    padding: 15px 20px;
+
+    font-size: 9px;
+  }
+
+  .booking-hero-photo {
+    width: 100%;
+
+    border-radius: 22px;
+  }
+
+  .booking-hero-photo img {
+    border-radius: 22px;
+  }
+
+
+  /* CONTACT */
+
+  .booking-contact {
+    padding: 80px 0;
+  }
+
+  .booking-contact-grid {
+    gap: 50px;
+  }
+
+  .booking-contact-heading h2 {
+    font-size: 58px;
+  }
+
+  .contact-main-link,
+  .booking-copy-email,
+  .contact-main-text {
+    font-size: 27px;
+  }
+
+  .contact-method {
+    padding-bottom: 28px;
+
+    margin-bottom: 28px;
+  }
+
+
+  /* SCHOLARSHIP */
+
+  .booking-scholarship {
+    padding: 80px 0;
+  }
+
+  .scholarship-booking-grid {
+    gap: 40px;
+  }
+
+  .scholarship-booking-copy h2 {
+    font-size: 52px;
+  }
+
+  .scholarship-booking-copy
+  > p:not(.booking-label) {
+
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .scholarship-booking-photo {
+    width: 100%;
+
+    border-radius: 22px;
+  }
+
+  .scholarship-booking-photo img {
+    border-radius: 22px;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+   ================================================== */
+
+@media (max-width: 480px) {
+
+  .booking-hero h1 {
+    font-size: 52px;
+  }
+
+  .contact-main-link,
+  .booking-copy-email,
+  .contact-main-text {
+    font-size: 23px;
+  }
+
+  .scholarship-booking-copy h2 {
+    font-size: 47px;
+  }
+
+}

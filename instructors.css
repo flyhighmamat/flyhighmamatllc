@@ -1,0 +1,564 @@
+.instructors-page {
+  --cream: #faf4ea;
+  --white: #fffdf8;
+  --blue: #669bbc;
+  --light-blue: #ebf2fa;
+  --navy: #173753;
+  --taupe: #5e503f;
+
+  --heading:
+    "Mrs Eaves OT",
+    Georgia,
+    serif;
+
+  --body:
+    "Aquavit",
+    Arial,
+    sans-serif;
+
+  margin: 0;
+
+  background: var(--white);
+  color: var(--navy);
+
+  overflow-x: hidden;
+}
+
+
+.instructors-page h1,
+.instructors-page h2,
+.instructors-page h3 {
+  font-family: var(--heading);
+}
+
+
+.instructors-page p,
+.instructors-page a,
+.instructors-page span,
+.instructors-page button {
+  font-family: var(--body);
+}
+
+
+.instructors-container {
+  width:
+    min(1120px, calc(100% - 80px));
+
+  margin: 0 auto;
+}
+
+
+.instructors-label {
+  margin: 0 0 17px;
+
+  color: var(--blue);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+
+.instructors-hero {
+  padding: 90px 0 105px;
+
+  background: var(--white);
+}
+
+
+.instructors-hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(320px, 0.82fr);
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+.instructors-hero-copy {
+  max-width: 650px;
+}
+
+
+.instructors-hero h1 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-size:
+    clamp(64px, 7vw, 98px);
+
+  font-weight: 400;
+
+  line-height: 0.92;
+}
+
+
+.instructors-lead {
+  max-width: 560px;
+
+  margin: 30px 0 0;
+
+  color:
+    rgba(23, 55, 83, 0.72);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+.instructors-hero-photo {
+  width: 100%;
+  max-width: 500px;
+
+  margin-left: auto;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+
+.instructors-hero-photo img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-radius: 28px;
+}
+
+
+.instructor-profile {
+  width: 100%;
+
+  padding: 100px 0;
+}
+
+
+.instructor-profile-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(320px, 430px)
+    minmax(0, 1fr);
+
+  gap: 85px;
+
+  align-items: center;
+}
+
+
+.profile-reverse {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 430px);
+}
+
+
+.profile-reverse .instructor-photo {
+  order: 2;
+}
+
+
+.profile-reverse .instructor-copy {
+  order: 1;
+}
+
+
+.profile-gabe {
+  background: var(--light-blue);
+  color: var(--navy);
+}
+
+
+.profile-thomas {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+
+.profile-robert {
+  background: var(--taupe);
+  color: var(--cream);
+}
+
+
+.profile-team {
+  background: var(--blue);
+  color: var(--cream);
+}
+
+
+.instructor-photo {
+  width: 100%;
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+
+.instructor-photo img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-radius: 28px;
+}
+
+
+.instructor-copy {
+  width: 100%;
+  max-width: 610px;
+}
+
+
+.instructor-copy h2 {
+  margin: 0 0 10px;
+
+  font-size:
+    clamp(56px, 5vw, 76px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+
+.instructor-role {
+  margin: 0 0 30px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+
+.instructor-copy
+p:not(.instructor-role):not(.instructors-label) {
+  max-width: 580px;
+
+  margin: 0 0 19px;
+
+  font-size: 14px;
+
+  line-height: 1.78;
+}
+
+
+.instructor-copy
+p:not(.instructor-role):not(.instructors-label):last-child {
+  margin-bottom: 0;
+}
+
+
+.profile-gabe .instructor-copy h2 {
+  color: var(--navy);
+}
+
+
+.profile-gabe .instructor-role {
+  color: var(--blue);
+}
+
+
+.profile-gabe
+.instructor-copy
+p:not(.instructor-role):not(.instructors-label) {
+  color:
+    rgba(23, 55, 83, 0.74);
+}
+
+
+.profile-thomas .instructor-copy h2 {
+  color: var(--cream);
+}
+
+
+.profile-thomas .instructor-role {
+  color: #a8cce0;
+}
+
+
+.profile-thomas
+.instructor-copy
+p:not(.instructor-role):not(.instructors-label) {
+  color:
+    rgba(250, 244, 234, 0.84);
+}
+
+
+.profile-robert .instructor-copy h2 {
+  color: var(--cream);
+}
+
+
+.profile-robert .instructor-role {
+  color:
+    rgba(250, 244, 234, 0.72);
+}
+
+
+.profile-robert
+.instructor-copy
+p:not(.instructor-role):not(.instructors-label) {
+  color:
+    rgba(250, 244, 234, 0.88);
+}
+
+
+.profile-team .instructor-copy h2 {
+  color: var(--cream);
+}
+
+
+.profile-team .team-label {
+  color: var(--cream);
+}
+
+
+.profile-team
+.instructor-copy
+p:not(.instructor-role):not(.instructors-label) {
+  color:
+    rgba(250, 244, 234, 0.9);
+}
+
+
+.team-photo {
+  max-width: 460px;
+}
+
+
+.team-copy {
+  max-width: 600px;
+}
+
+
+.instructors-page .footer-contact {
+  font-style: normal;
+}
+
+
+.instructors-page .footer-contact p {
+  margin: 0 0 7px;
+}
+
+
+.instructors-page .footer-contact a {
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.instructors-page .footer-contact a:hover {
+  color: var(--blue);
+}
+
+
+.instructors-page .footer-phone {
+  margin-top: 18px;
+}
+
+
+.instructors-page .copy-email {
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color:
+    rgba(23, 55, 83, 0.72);
+
+  font-family: var(--body);
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.instructors-page .copy-email:hover {
+  color: var(--blue);
+}
+
+
+@media (max-width: 900px) {
+
+  .instructors-container {
+    width:
+      min(680px, calc(100% - 50px));
+  }
+
+
+  .instructors-hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 48px;
+  }
+
+
+  .instructors-hero-photo {
+    max-width: 540px;
+
+    margin-left: 0;
+  }
+
+
+  .instructor-profile {
+    padding: 85px 0;
+  }
+
+
+  .instructor-profile-grid,
+  .profile-reverse {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .profile-reverse .instructor-photo,
+  .profile-reverse .instructor-copy {
+    order: initial;
+  }
+
+
+  .instructor-photo {
+    width: min(430px, 100%);
+
+    margin: 0;
+  }
+
+
+  .instructor-copy {
+    max-width: 620px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .instructors-container {
+    width:
+      calc(100% - 40px);
+  }
+
+
+  .instructors-hero {
+    padding:
+      65px 0
+      75px;
+  }
+
+
+  .instructors-hero-grid {
+    gap: 38px;
+  }
+
+
+  .instructors-hero h1 {
+    font-size: 55px;
+
+    line-height: 0.96;
+  }
+
+
+  .instructors-lead {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  .instructors-hero-photo,
+  .instructors-hero-photo img {
+    border-radius: 22px;
+  }
+
+
+  .instructor-profile {
+    padding:
+      72px 0;
+  }
+
+
+  .instructor-profile-grid,
+  .profile-reverse {
+    gap: 34px;
+  }
+
+
+  .instructor-photo {
+    width: 100%;
+    max-width: 390px;
+
+    border-radius: 22px;
+  }
+
+
+  .instructor-photo img {
+    border-radius: 22px;
+  }
+
+
+  .instructor-copy h2 {
+    font-size: 50px;
+  }
+
+
+  .instructor-role {
+    margin-bottom: 25px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.6px;
+  }
+
+
+  .instructor-copy
+  p:not(.instructor-role):not(.instructors-label) {
+    font-size: 13px;
+
+    line-height: 1.72;
+  }
+
+}
+
+
+@media (max-width: 430px) {
+
+  .instructors-hero h1 {
+    font-size: 49px;
+  }
+
+
+  .instructor-copy h2 {
+    font-size: 46px;
+  }
+
+}

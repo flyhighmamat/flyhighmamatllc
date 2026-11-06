@@ -228,16 +228,26 @@ p:not(.about-page-label):last-child {
 /* STORY PHOTO */
 
 .about-story-photo {
-  width: 100%;
-  max-width: 520px;
-
-  margin-left: auto;
-
   overflow: hidden;
-
   border-radius: 28px;
 }
 
+.about-story-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  transform: scale(1.25);
+  transform-origin: center center;
+}
+
+@media (max-width: 650px) {
+
+  .about-story-photo {
+    border-radius: 22px;
+  }
+
+}
 
 .about-story-photo img {
   width: 100%;

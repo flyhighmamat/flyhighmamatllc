@@ -79,9 +79,9 @@ button {
 }
 
 .header-inner {
-  width: min(1180px, calc(100% - 80px));
-  margin: 0 auto;
-  padding: 18px 0;
+  width: 100%;
+  margin: 0;
+  padding: 18px 32px;
 
   display: flex;
   align-items: center;
@@ -94,6 +94,7 @@ button {
 .header-logo {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   flex-shrink: 0;
 
   background: #ffffff;
@@ -101,7 +102,7 @@ button {
 
 .header-logo img {
   display: block;
-  width: 180px;
+  width: 190px;
   height: auto;
 
   background: #ffffff;
@@ -111,7 +112,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 26px;
+  gap: 30px;
+  margin-left: auto;
 
   background: #ffffff;
 }
@@ -122,13 +124,13 @@ button {
   font-family:
     var(--body, "Aquavit", Arial, sans-serif);
 
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
 
-  letter-spacing: 1.4px;
+  letter-spacing: 1.35px;
   text-transform: uppercase;
-
   text-decoration: none;
+  white-space: nowrap;
 
   transition:
     color 0.2s ease,
@@ -140,57 +142,105 @@ button {
   color: #669bbc;
 }
 
-
-@media (max-width: 900px) {
-
+@media (max-width: 1050px) {
   .header-inner {
-    width: min(680px, calc(100% - 50px));
-
-    padding: 16px 0;
-
-    flex-direction: column;
-    align-items: flex-start;
-
-    gap: 18px;
+    padding: 17px 26px;
+    gap: 28px;
   }
 
   .header-logo img {
-    width: 165px;
+    width: 185px;
   }
 
   .main-nav {
-    width: 100%;
-
-    justify-content: flex-start;
-
-    gap: 18px 22px;
-
-    flex-wrap: wrap;
-  }
-
-}
-
-
-@media (max-width: 650px) {
-
-  .header-inner {
-    width: calc(100% - 40px);
-  }
-
-  .header-logo img {
-    width: 150px;
-  }
-
-  .main-nav {
-    gap: 14px 18px;
+    gap: 20px;
   }
 
   .main-nav a {
     font-size: 11px;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    padding: 16px 22px;
+    gap: 22px;
   }
 
+  .header-logo img {
+    width: 180px;
+  }
+
+  .main-nav {
+    gap: 14px 18px;
+    flex-wrap: wrap;
+  }
+
+  .main-nav a {
+    font-size: 10.5px;
+    letter-spacing: 1px;
+  }
 }
+
+@media (max-width: 700px) {
+  .header-inner {
+    padding: 18px 20px 22px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .header-logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-logo img {
+    width: 175px;
+    margin: 0 auto;
+  }
+
+  .main-nav {
+    width: 100%;
+    margin: 0;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+
+    text-align: center;
+  }
+
+  .main-nav a {
+    font-size: 11px;
+    letter-spacing: 1.1px;
+  }
+}
+
+@media (max-width: 430px) {
+  .header-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header-logo img {
+    width: 170px;
+  }
+
+  .main-nav {
+    gap: 11px 16px;
+  }
+
+  .main-nav a {
+    font-size: 10.5px;
+    letter-spacing: 1px;
+  }
+}
+
+
 /* ==================================================
    HERO
    ================================================== */
@@ -1051,15 +1101,6 @@ button {
 
 @media (max-width: 1050px) {
 
-  .main-nav {
-    gap: 20px;
-  }
-
-  .main-nav a {
-    font-size: 10px;
-
-    letter-spacing: 1.2px;
-  }
 
 }
 
@@ -1070,29 +1111,8 @@ button {
 
 @media (max-width: 900px) {
 
-  .header-inner,
   .footer-inner {
     width: calc(100% - 40px);
-  }
-
-
-  /* HEADER */
-
-  .header-logo {
-    width: 140px;
-  }
-
-  .header-logo img {
-    width: 140px;
-    height: 92px;
-  }
-
-  .main-nav {
-    gap: 16px;
-  }
-
-  .main-nav a {
-    font-size: 9px;
   }
 
 
@@ -1181,48 +1201,6 @@ button {
    ================================================== */
 
 @media (max-width: 700px) {
-
-  /* HEADER */
-
-  .site-header {
-    height: auto;
-  }
-
-  .header-inner {
-    padding: 14px 0 18px;
-
-    flex-direction: column;
-
-    gap: 12px;
-  }
-
-  .header-logo {
-    width: 125px;
-  }
-
-  .header-logo img {
-    width: 125px;
-    height: auto;
-  }
-
-  .main-nav {
-    margin-left: 0;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    gap: 10px 18px;
-
-    white-space: normal;
-  }
-
-  .main-nav a {
-    font-size: 8px;
-
-    letter-spacing: 1.1px;
-  }
-
 
   /* HERO */
 

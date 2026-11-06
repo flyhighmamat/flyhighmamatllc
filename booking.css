@@ -1165,3 +1165,50 @@ body.booking-page {
     font-size: 22px;
   }
 }
+/* =========================================
+   CENTER FEATHER ON TABLET + MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .booking-hero-grid {
+    display: block !important;
+  }
+
+  .booking-hero-feather {
+    position: static !important;
+
+    width: 300px !important;
+    max-width: 300px !important;
+
+    margin: 40px auto 0 !important;
+
+    transform: none !important;
+
+    display: block !important;
+  }
+
+  .booking-hero-feather img {
+    width: 100% !important;
+    height: auto !important;
+
+    display: block !important;
+
+    margin: 0 auto !important;
+
+    transform: none !important;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .booking-hero-feather {
+    width: 260px !important;
+    max-width: 260px !important;
+
+    margin: 35px auto 0 !important;
+  }
+
+}
